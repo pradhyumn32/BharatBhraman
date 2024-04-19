@@ -1,0 +1,2 @@
+# BharatBhraman
+This is a website for a traveling catalogue of India.This project aims to provide comprehensive information about various travel destinations in India. It serves as a guide for travelers exploring India, offering details about different locations, accommodations, attractions, and more.
