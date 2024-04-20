@@ -1,14 +1,8 @@
-# Blogging Site
+# Social Media Site
 
-This project is a platform for creating and sharing blog posts. It provides users with the ability to create accounts, write and publish blogs, follow other users, and engage with content through comments and likes.
+This project serves as a platform for sharing noteworthy tourist destinations. It enables users to create accounts, upload images, tag individuals, follow other users, and interact with content via likes and reviews.
 
-## Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-
+Additionally, the site offers recommendations for unique and culturally rich tourist spots, such as those in North-East and South India, which may be lesser-known to mainstream tourists. Agencies can also utilize the platform to promote their services, including hotel accommodations and travel packages.
 ## Features
 
 - **User Authentication:** Users can create accounts, log in, and securely authenticate their identity.
@@ -27,12 +21,12 @@ This project is a platform for creating and sharing blog posts. It provides user
 
 1. **Clone the repository:**
    ```
-   git clone https://github.com/West-Tiwan/blog.git
+   git clone https://github.com/pradhyumn32/BharatBhraman.git
    ```
 
 2. **Navigate to the project directory:**
    ```
-   cd blog
+   cd BharatBhraman
    ```
 
 3. **Install dependencies:**
@@ -62,7 +56,7 @@ This project is a platform for creating and sharing blog posts. It provides user
    - Write and publish your own blogs.
 
 4. **Engage with Content(coming soon):**
-   - Like posts to show appreciation and leave comments to start discussions.
+   - Like and comment (reviews) posts to show appreciation and leave comments to start discussions.
 
 5. **Follow Users(coming soon):**
    - Follow other users to see their posts on your feed.
@@ -80,7 +74,3 @@ This project is a platform for creating and sharing blog posts. It provides user
 
 - **Authentication:**
   - Mongoose-passport-local
-
-## Contributing
-
-Contact me on xyzmohit.singh@gmail.com before raising PR.
