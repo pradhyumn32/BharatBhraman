@@ -1,10 +1,11 @@
 <% include ./partials/header.ejs %>
-<% post.reverse().forEach(function(elem){%>
-        <div class="container">
-            <img src="/images/uploads/<%= elem.cover %>">
-            <%= elem.heading %>
-                <%= elem.date %>
-                    <%= elem.body %>
-        </div>
+<div class="flex justify-center">
+<% post.reverse().forEach(function(elem){%>    
+              <div class="card w-1/2">
+                <img class="bd-placeholder-img card-img-top" src="/images/uploads/<%= elem.cover %>">
+                <div class="card-body">
+                  <p class="card-text"> <%= elem.heading %><br> <%= elem.date %><br> <%= elem.body %> </p>
+                </div>
+              </div>
         <% }); %>
-            <% include ./partials/footer.ejs %>
+    </div>
