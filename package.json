@@ -1,24 +1,26 @@
 {
-  "name": "project-grandeur",
-  "version": "1.0.0",
-  "description": "API for tourist places",
-  "types": "module",
-  "main": "index.js",
+  "name": "blog",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "47seconds",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^3.1.0"
+    "start": "node ./bin/www"
   },
   "dependencies": {
-    "cors": "^2.8.5",
+    "axios": "^1.6.8",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
     "dotenv": "^16.4.5",
-    "ejs": "^3.1.10",
-    "express": "^4.19.2",
-    "mongoose": "^8.3.1",
-    "morgan": "^1.10.0",
-    "path": "^0.12.7"
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.18.0",
+    "http-errors": "~1.6.3",
+    "mongoose": "^8.1.1",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^8.0.0",
+    "tailwindcss": "^3.4.1",
+    "uuid": "^9.0.1"
   }
 }

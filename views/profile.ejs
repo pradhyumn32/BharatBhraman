@@ -1,0 +1,39 @@
+<% include ./partials/header.ejs %>
+  <div>
+    <img src="/images/uploads/<%= user.profileImage %>" alt="/images/uploads/default.png">
+    <h1>
+      <%= user.username %>
+    </h1>
+    <h3>
+      <%= user.name %>
+    </h3>
+    <h4>
+      <%= user.bio %>
+    </h4>
+    <div>
+      <a href="/edit">Edit Profile</a>
+    </div>
+    <div>
+      <a href="/search">Search</a>
+    </div>
+    <div>
+      <a href="/feed">feed</a>
+    </div>
+    <div>
+      <a href="/upload">Upload a Blog</a>
+    </div>
+    <div id="postArea">
+      <% user.posts.forEach(function(posts){ %>
+        <a href="/blogger/<%= user._id %>/<%= posts._id %>">
+          <div>
+            <img src="/images/uploads/<%=posts.cover%>">
+            <h5>
+              <%= posts.heading %>
+            </h5>
+            <a href="/delete/post/<%= posts._id %>">Delete</a>
+          </div>
+        </a>
+        <% }); %>
+    </div>
+  </div>
+  <% include ./partials/footer.ejs %>

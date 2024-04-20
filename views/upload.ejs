@@ -1,0 +1,26 @@
+<% include ./partials/header.ejs %>
+    <div>
+        <div>
+            <div c>
+                <a href="/profile"><i class="ri-arrow-left-s-line"></i> profile</a>
+                <h2>Upload Post</h2>
+                <a href="/feed"><i class="ri-home-line"></i> home</a>
+            </div>
+            <div>
+                <button id="selectpic">select picture</button>
+            </div>
+            <form id="uploadform" action="/upload" enctype="multipart/form-data"
+                method="post">
+                <input hidden type="file" name="image">
+                <input type="text" placeholder="Heading" name="heading">
+                <textarea placeholder="Write a caption..." name="body"></textarea>
+                <input type="submit" value="Post">
+            </form>
+        </div>
+    </div>
+<script>
+    document.querySelector("#selectpic").addEventListener("click" ,function () {
+        document.querySelector("#uploadform input").click();
+    });
+</script>
+<% include ./partials/footer.ejs %>

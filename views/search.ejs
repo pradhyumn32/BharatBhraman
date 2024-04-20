@@ -1,0 +1,36 @@
+<% include ./partials/header.ejs %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    let clutter = "";
+    window.addEventListener("DOMContentLoaded", (event) => {
+        const el = document.getElementById('inputusername');
+        if (el) {
+            el.addEventListener("input", function () {
+                axios.get(`/username/${el.value}`).then((data) => {
+                    clutter = '';
+                    data.data.forEach((elem) => {
+                        clutter += `
+                            <a href="/blogger/<%= user._id %>">
+                                <div>
+                                    <div>
+                                        <img src="/images/uploads/${elem.profileImage}">
+                                    </div>
+                                    <h3>${elem.username}</h3>
+                                    <h4>${elem.name}</h4>
+                                </div>
+                            </a>`
+                        });
+                        document.querySelector(".users").innerHTML = clutter;
+                    });
+                })
+            }
+        });
+</script>
+<div>
+    <div>
+        <i></i>
+        <input id="inputusername" type="text" placeholder="search username">
+    </div>
+    <div class="users"></div>
+</div>
+<% include ./partials/footer.ejs %>
